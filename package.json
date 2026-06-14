@@ -1,0 +1,17 @@
+{
+  "name": "portfolio",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently \"cd apps/main && npm run dev\" \"cd apps/projects && npm run dev\" \"cd apps/blog && npm run dev\"",
+    "build": "turbo run build",
+    "lint": "turbo run lint"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2",
+    "turbo": "latest"
+  },
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ]
+}
